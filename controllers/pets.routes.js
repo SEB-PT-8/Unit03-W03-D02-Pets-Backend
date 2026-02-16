@@ -45,4 +45,36 @@ router.get('/:petId', async (req,res)=>{
 
 
 
+router.delete('/:petId',async (req,res)=>{
+    try{
+        const deletedPet = await Pet.findByIdAndDelete(req.params.petId)
+        res.status(200).json(deletedPet)
+    }
+    catch(err){
+        console.log(err)
+        res.status(500).json({error:err.message})
+    }
+})
+
+
+
+router.put('/:petId',async(req,res)=>{
+    try{
+        const updatedPet = await Pet.findByIdAndUpdate(req.params.petId, req.body,{new:true})
+
+        if(!updatedPet){
+            return res.status(404).json({message:"Pet not found"})
+        }
+
+        res.status(200).json(updatedPet)
+
+
+    }
+    catch(err){
+        console.log(err)
+        res.status(500).json({error:err.message})
+
+    }
+})
+
 module.exports = router
