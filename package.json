@@ -9,11 +9,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
     "mongoose": "^9.2.1",
     "morgan": "^1.10.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SEB-PT-8/Unit03-W03-D02-Pets-Backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SEB-PT-8/Unit03-W03-D02-Pets-Backend/issues"
+  },
+  "homepage": "https://github.com/SEB-PT-8/Unit03-W03-D02-Pets-Backend#readme",
+  "description": ""
 }
